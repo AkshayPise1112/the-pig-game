@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section class="player--0 opacity">
+                <h2 class="name">PLAYER 1</h2>
+                <p class="score" id="score--0">40</p>
+                <div class="current">
+                    <p class="currLebel">CURRENT</p>
+                    <p class="currScore" id="currScore--0">0</p>
+                </div>
+            </section>
+            <section class="player--1">
+                <h2 class="name">PLAYER 2</h2>
+                <p class="score" id="score--1">23</p>
+                <div class="current">
+                    <p class="currLebel">CURRENT</p>
+                    <p class="currScore" id="currScore--1">0</p>
+                </div>
+            </section>
+
+            <img src="dice-1.png" alt="dice" class="diceimg">
+            <button class="refreshbtn btn">🔄 NEW GAME <sub>Esc</sub></button>
+            <button class="dicebtn btn">🎲 ROLL DICE <sub>Enter</sub></button>
+            <button class="holdbtn btn">📥 HOLD <sub>Space</sub></button>
+
+            <button class="question"><img src="question-mark1.png" alt="?"></button>
+            
+            <div class="overlay hidden"></div>
+        </main>
+        <footer>
+            <div class="rules hidden">
+                <p>
+                    <ul id="listType">
+                        <li>How to Play this Game::
+                            <ol id="listType">
+                                <li>When User Tap on ROLL DICE Button:</li>
+                                <li>Then it Generates Random Dice Number.</li>
+                                <li>It Display the Dice Number.
+                                    <ul id="listType">
+                                        <li>If the Dice Number is 1 then it Switch the Player.</li>
+                                        <li>If it is not 1 then it Simply add into Current Score.</li>
+                                    </ul>
+                                </li>
+                                <li>When User click on HOLD Button:
+                                    <ul id="listType">
+                                        <li>The Current Number add into Total Score.</li>
+                                        <li>If Total Score is Greater than or equal to 100 then Current Player Wins.</li>
+                                        <li>If Total Score is less than 100 then Player Switches.</li>
+                                    </ul>
+                                </li>
+                                <li>When you Click on NEW GAME Button:
+                                    <ul id="listType">
+                                        <li>It set all Score to 0.</li>
+                                        <li>Also Player 1 is the Starting Player.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <button class="cancel">✖</button>
+                </p>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
